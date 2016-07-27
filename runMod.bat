@@ -1,0 +1,2 @@
+cd ..\..\
+start iw3mp.exe +set fs_game "mods\code" +exec promod.cfg +set r_fullscreen 0 +set r_mode 5 +set dedicated 0 +set sv_punkbuster 0 +set developer 1 +set developer_script 1 +set dev_showspawns 0 +set logfile 1 +devmap mp_crash

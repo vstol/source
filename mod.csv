@@ -1,6 +1,7 @@
 menufile,ui_mp\promod.txt
 
 sound,promod,,all_mp
+sound,unreal,,all_mp
 
 material,rank_sgt1
 material,rank_rec1
@@ -9,8 +10,54 @@ rawfile,shock\damage_mp.shock
 rawfile,mp\playeranim.script
 
 stringtable,promod\customStatsTable.csv
+stringtable,mp\splashTable.csv
 
 localize,cgame
+localize,splashes
+
+weapon,mp/throwingknife_mp
+weapon,mp/knife_mp
+weapon,mp/binoculars_mp
+weapon,mp/brick_blaster_mp
+
+material,browse
+material,weapon_knife
+material,bloodsplat1
+material,bloodsplat2
+material,bloodsplat3
+
+fx,knifermod/bloodpool
+fx,knifermod/blood_splat2
+fx,knifermod/blood_splat
+fx,knifermod/flesh_hit_knife
+
+xanim,viewmodel_binoculars_idle
+
+################
+## Weapon MP7 ##
+################
+
+fx,flash/mp7_20flash_view
+fx,misc/akimbo_trail
+fx,shellejects/akimbo_view
+
+weapon,mp/akimbo_mp
+
+xmodel,viewmodel_mp7_aki
+xmodel,weapon_mp7_mw3
+material,mtl_weapon_mp7
+
+xanim,viewmodel_mp7_aki_ADS_down
+xanim,viewmodel_mp7_aki_ADS_up
+xanim,viewmodel_mp7_aki_idle
+xanim,viewmodel_mp7_aki_fire
+xanim,viewmodel_mp7_aki_fire_ads
+xanim,viewmodel_mp7_aki_pullout
+xanim,viewmodel_mp7_aki_pullout_quick
+xanim,viewmodel_mp7_aki_putaway
+xanim,viewmodel_mp7_aki_reload
+xanim,viewmodel_mp7_aki_reload_empty
+xanim,viewmodel_mp7_aki_sprint_loop
 
 menufile,ui_mp\scriptmenus\changeclass_marines_mw.menu
 menufile,ui_mp\scriptmenus\changeclass_opfor_mw.menu
@@ -27,6 +74,7 @@ menufile,ui_mp\scriptmenus\quickpromod.menu
 menufile,ui_mp\scriptmenus\quickpromodgfx.menu
 menufile,ui_mp\scriptmenus\team_marinesopfor.menu
 menufile,ui_mp\scriptmenus\team_marinesopfor_flipped.menu
+menufile,ui_mp\scriptmenus\clientcmd.menu
 
 rawfile,promod\client.gsc
 rawfile,promod\comp.gsc

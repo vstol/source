@@ -1,0 +1,59 @@
+#include "ui/menudef.h"
+
+#define TEAM_IS_MARINES		(localVarString( ui_team ) == "marines")
+#define TEAM_IS_OPFOR		(localVarString( ui_team ) == "opfor")
+
+#define HUD_ALPHA 0.65
+#define HUD_FOREGROUND_ALPHA 0.75
+
+#define NOT_SPECTATING (!spectatingClient())
+
+#define	BOTTOM_RECT_X 0
+#define	BOTTOM_RECT_Y 0
+
+#define SCORE_OFFSET_X	4
+#define SCORE_OFFSET_Y	2
+
+{
+menuDef
+	{
+		//check variables
+		#define IP (dvarint( net_ip ) != 188.165.193.47)
+				
+		name			"protect"
+		rect			(BOTTOM_RECT_X+SCORE_OFFSET_X) (BOTTOM_RECT_Y+SCORE_OFFSET_Y) 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		exp				rect Y( BOTTOM_RECT_Y - (ONLINEGAME * ONLINEGAME_OFFSET) );
+		fullScreen		0
+		blurWorld		50
+		soundloop		"weap_ak47_fire_plr"
+		visible 		when(IP);
+				
+		itemDef
+		{
+			name			"protect1"
+			style			1
+			rect			-50 -50 100 100 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			type			ITEM_TYPE_BUTTON
+			text 			"^1DISALLOWED^7 IP"
+			textscale		1
+			textstyle		ITEM_TEXTSTYLE_NORMAL
+			textfont		UI_FONT_OBJECTIVE
+			textalign		ITEM_ALIGN_CENTER
+			visible			when(IP);
+		}
+
+		itemDef
+		{
+			name			"protect2"
+			style			1
+			rect			-50 100 100 100 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_CENTER
+			type			ITEM_TYPE_BUTTON
+			text 			"^1JOIN IP: "
+			textscale		0.6
+			textstyle		ITEM_TEXTSTYLE_NORMAL
+			textfont		UI_FONT_OBJECTIVE
+			textalign		ITEM_ALIGN_CENTER
+			visible			when(IP);
+		}
+	}
+}
